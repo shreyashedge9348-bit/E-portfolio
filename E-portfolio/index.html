@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreya Shedge | E-Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #061226;
+    color: #f5f6ff;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    background: #08152b;
+    border-bottom: 1px solid #283a60;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a56aff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul a:hover {
+    color: #a56aff;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 65px 8%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-text h3 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.hero-text h1 span {
+    color: #a56aff;
+}
+
+.hero-text h2 {
+    color: #c5cce0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: #c4cce0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.profile {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 5px solid #9657ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #182e54, #54338b);
+    font-size: 85px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 35px #7445bd66;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 8px 8px 8px 0;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #7739ed, #a45cff);
+    color: white;
+    text-decoration: none;
+    border: 1px solid #a56aff;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #9555ff66;
+}
+
+.btn-outline {
+    background: transparent;
+}
+
+/* COMMON SECTIONS */
+section {
+    padding: 50px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.section-title span {
+    color: #a56aff;
+}
+
+.about-box {
+    background: #0d1d37;
+    padding: 30px;
+    border: 1px solid #283e68;
+    border-radius: 18px;
+    line-height: 1.8;
+    color: #d0d7e9;
+}
+
+/* SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background: #0d1d37;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #263c66;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    border-color: #a56aff;
+}
+
+.skill h3 {
+    color: #a56aff;
+    margin-bottom: 10px;
+}
+
+/* EDUCATION */
+.education-box {
+    background: #0d1d37;
+    border-left: 4px solid #a56aff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* PROJECTS */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    background: #0d1d37;
+    border: 1px solid #283e68;
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #a56aff;
+    box-shadow: 0 8px 20px #0003;
+}
+
+.project-card h3 {
+    color: #b58aff;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #c4cce0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* RESUME */
+.resume-box {
+    text-align: center;
+    background: #0d1d37;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #283e68;
+}
+
+/* CONTACT */
+.contact-box {
+    text-align: center;
+    background: #0d1d37;
+    padding: 30px;
+    border-radius: 18px;
+    line-height: 2;
+    border: 1px solid #283e68;
+}
+
+.contact-box a {
+    color: #b58aff;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #08152b;
+    color: #aab5cc;
+    border-top: 1px solid #283a60;
+}
+
+footer span {
+    color: #a56aff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">SS<span>.</span></div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="profile">SS</div>
+
+    <div class="hero-text">
+        <h3>Hello, I'm</h3>
+        <h1>Shreya <span>Shedge</span></h1>
+
+        <h2>MCA Student | Web Developer | Tech Enthusiast</h2>
+
+        <p>
+            Turning Ideas into Innovative Solutions.
+            I love learning new technologies, building creative projects
+            and exploring the world of software development.
+        </p>
+
+        <a href="#resume" class="btn">Download Resume</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <div class="about-box">
+        <p>
+            Hello! I am Shreya Shedge, a passionate and enthusiastic MCA
+            student with a strong interest in technology, programming,
+            and web development. I have completed my Bachelor of Computer
+            Applications (BCA) and am currently pursuing my Master of
+            Computer Applications (MCA).
+        </p>
+
+        <br>
+
+        <p>
+            I enjoy learning new technologies, exploring innovative ideas,
+            and developing creative solutions to real-world problems.
+            I have knowledge of HTML, CSS, JavaScript, Java, Python,
+            and SQL. I am interested in designing user-friendly websites
+            and developing software applications that are simple,
+            efficient, and useful.
+        </p>
+
+        <br>
+
+        <p>
+            Through my academic projects, I have gained experience in
+            programming, problem-solving, teamwork, and project development.
+            My goal is to continuously improve my technical skills,
+            gain practical experience, and build a successful career
+            in the IT industry.
+        </p>
+
+        <br>
+
+        <p>
+            I believe in continuous learning, hard work, creativity,
+            and self-improvement. I am always eager to explore new
+            opportunities, take on challenges, and transform my ideas
+            into meaningful projects.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+        <div class="skill"><h3>HTML</h3><p>Web Structure</p></div>
+        <div class="skill"><h3>CSS</h3><p>Web Design</p></div>
+        <div class="skill"><h3>JavaScript</h3><p>Interactivity</p></div>
+        <div class="skill"><h3>Java</h3><p>Programming</p></div>
+        <div class="skill"><h3>Python</h3><p>Development</p></div>
+        <div class="skill"><h3>SQL</h3><p>Database</p></div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2 class="section-title">My <span>Education</span></h2>
+
+    <div class="education-box">
+        <h3>🎓 Master of Computer Applications (MCA)</h3>
+        <p>Currently Pursuing</p>
+    </div>
+
+    <div class="education-box">
+        <h3>🎓 Bachelor of Computer Applications (BCA)</h3>
+        <p>Completed</p>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>E-Portfolio Website</h3>
+            <p>
+                A personal portfolio website to showcase my profile,
+                skills, education, projects and achievements.
+            </p>
+            <p><b>Technology:</b> HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Online Job Portal</h3>
+            <p>
+                A website where users can explore job opportunities
+                and find suitable jobs based on their interests.
+            </p>
+            <p><b>Technology:</b> HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Sports Online News Website</h3>
+            <p>
+                A sports news platform designed to display sports news,
+                updates, articles and information.
+            </p>
+            <p><b>Technology:</b> HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Student Attendance Management</h3>
+            <p>
+                A simple application to record student attendance
+                and view attendance history.
+            </p>
+            <p><b>Technology:</b> Python, Flask, HTML, CSS</p>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Crop & Pest Diagnostic App</h3>
+            <p>
+                An agriculture-focused project idea for helping users
+                understand crop problems and pest-related information.
+            </p>
+            <p><b>Technology:</b> AI, Python, Web Technology</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+    <h2 class="section-title">My <span>Resume</span></h2>
+
+    <div class="resume-box">
+        <h3>Want to know more about my skills and experience?</h3>
+        <p style="margin: 15px;">Download my resume below.</p>
+
+        <!-- Add your resume PDF in the same folder -->
+        <a href="Shreya_Resume.pdf" download class="btn">
+            Download Resume
+        </a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+
+    <div class="contact-box">
+        <h3>Let's Connect!</h3>
+
+        <p>Email:
+            <a href="mailto:your-email@example.com">
+                your-email@example.com
+            </a>
+        </p>
+
+        <p>Location: Pune, Maharashtra, India</p>
+
+        <p>Course: Master of Computer Applications (MCA)</p>
+
+        <p>Interested in: Web Development & Technology</p>
+
+        <a href="https://wa.me/91XXXXXXXXXX"
+           class="btn" target="_blank">
+            Chat on WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 <span>Shreya Shedge</span> | E-Portfolio</p>
+    <p>Dream Big • Code Better • Achieve More 🚀</p>
+</footer>
+
+</body>
+</html>
